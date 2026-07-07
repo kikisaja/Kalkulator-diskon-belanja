@@ -1,0 +1,153 @@
+:root {
+    --bg-light: #f7fafc;
+    --panel-bg: #ffffff;
+    --text-dark: #1e293b;
+    --pop-yellow: #ffb703;
+    --pop-green: #06d6a0;
+    --pop-red: #ff477e;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.calculator-container {
+    background-color: var(--panel-bg);
+    padding: 30px;
+    border-radius: 24px;
+    border: 3px solid var(--text-dark);
+    box-shadow: 6px 6px 0px var(--text-dark);
+    max-width: 400px;
+    width: 100%;
+}
+
+.calc-header h1 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--pop-red);
+    margin-bottom: 5px;
+}
+
+.calc-header p {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+/* Grouping Input */
+.input-group {
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--text-dark);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid var(--text-dark);
+    border-radius: 10px;
+    outline: none;
+    background-color: #fafafa;
+}
+
+.input-group input:focus {
+    background-color: #ffffff;
+    border-color: var(--pop-yellow);
+}
+
+/* Tombol Pop Art */
+.btn-pop {
+    width: 100%;
+    background: var(--pop-yellow);
+    color: var(--text-dark);
+    border: 3px solid var(--text-dark);
+    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px var(--text-dark);
+    transition: all 0.1s ease;
+    margin-bottom: 5px;
+}
+
+.btn-pop:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px var(--text-dark);
+}
+
+.btn-pop:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px var(--text-dark);
+}
+
+/* Panel Hasil */
+.result-panel {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #f8fafc;
+    border: 2px solid var(--text-dark);
+    border-radius: 14px;
+    animation: popIn 0.2s ease-out;
+}
+
+.result-panel.hidden {
+    display: none;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.result-item:last-child {
+    margin-bottom: 0;
+    border-top: 2px dashed #cbd5e1;
+    padding-top: 8px;
+}
+
+.result-item strong {
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.text-green {
+    color: var(--pop-green);
+}
+
+/* Efek Warna Interaktif Spesial (Jika Hemat Banyak) */
+.result-panel.super-hemat {
+    background-color: #e8f5e9;
+    border-color: var(--pop-green);
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.95); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
