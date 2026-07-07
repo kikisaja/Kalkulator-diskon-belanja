@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Diskon Ceria 🛍️✨</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="calculator-container">
+        <header class="calc-header">
+            <h1>🛍️ DISKON CERIA</h1>
+            <p>Hitung total belanjaan dan hematmu secara instan!</p>
+        </header>
+
+        <div class="input-group">
+            <label for="harga-asli">Harga Barang (Rp)</label>
+            <input type="number" id="harga-asli" placeholder="Contoh: 100000" min="0">
+        </div>
+
+        <div class="input-group">
+            <label for="persen-diskon">Persentase Diskon (%)</label>
+            <input type="number" id="persen-diskon" placeholder="Contoh: 20" min="0" max="100">
+        </div>
+
+        <button id="btn-hitung" class="btn-pop">Hitung Diskon 🚀</button>
+
+        <div id="result-box" class="result-panel hidden">
+            <div class="result-item">
+                <span>Anda Hemat:</span>
+                <strong id="total-hemat" class="text-green">Rp 0</strong>
+            </div>
+            <div class="result-item">
+                <span>Harga Akhir:</span>
+                <strong id="harga-akhir">Rp 0</strong>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
